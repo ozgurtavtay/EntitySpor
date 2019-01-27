@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DalEntity", "DalEntity\DalEntity.csproj", "{DBB427AE-89F4-4D9A-95A2-688D2C6E73FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{E34AFA8C-9601-41CB-80E8-1239C8646B0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SporOrganizasyon", "SporOrganizasyon\SporOrganizasyon.csproj", "{823AA0E3-BA8C-4191-B671-1CD35F09B691}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DBB427AE-89F4-4D9A-95A2-688D2C6E73FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBB427AE-89F4-4D9A-95A2-688D2C6E73FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBB427AE-89F4-4D9A-95A2-688D2C6E73FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBB427AE-89F4-4D9A-95A2-688D2C6E73FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E34AFA8C-9601-41CB-80E8-1239C8646B0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E34AFA8C-9601-41CB-80E8-1239C8646B0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E34AFA8C-9601-41CB-80E8-1239C8646B0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E34AFA8C-9601-41CB-80E8-1239C8646B0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{823AA0E3-BA8C-4191-B671-1CD35F09B691}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{823AA0E3-BA8C-4191-B671-1CD35F09B691}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{823AA0E3-BA8C-4191-B671-1CD35F09B691}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{823AA0E3-BA8C-4191-B671-1CD35F09B691}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E8329F9F-8056-4AD7-9E26-468C19873BDB}
+	EndGlobalSection
+EndGlobal
