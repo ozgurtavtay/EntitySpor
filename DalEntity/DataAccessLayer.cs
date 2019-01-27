@@ -301,7 +301,7 @@ namespace DalEntity
                     htl.LineNumber = frame.GetFileLineNumber();
                     htl.ColumnNumber = frame.GetFileColumnNumber();
                     htl.Message = ex.Message.ToString();
-                    l
+
                     et.HataLoglari.Add(htl);
                     et.SaveChanges();
                 }
