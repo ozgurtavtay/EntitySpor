@@ -87,6 +87,7 @@
             this.comboBoxTip.Name = "comboBoxTip";
             this.comboBoxTip.Size = new System.Drawing.Size(121, 21);
             this.comboBoxTip.TabIndex = 16;
+            this.comboBoxTip.SelectedIndexChanged += new System.EventHandler(this.comboBoxTip_SelectedIndexChanged);
             // 
             // label5
             // 

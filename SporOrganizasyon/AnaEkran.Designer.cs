@@ -112,6 +112,7 @@
             // buttonKatil
             // 
             this.buttonKatil.BackColor = System.Drawing.Color.Transparent;
+            this.buttonKatil.Enabled = false;
             this.buttonKatil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonKatil.Location = new System.Drawing.Point(308, 18);
             this.buttonKatil.Name = "buttonKatil";
@@ -119,12 +120,12 @@
             this.buttonKatil.TabIndex = 5;
             this.buttonKatil.Text = "Etkinliğe Katıl";
             this.buttonKatil.UseVisualStyleBackColor = false;
-            this.buttonKatil.Visible = false;
             this.buttonKatil.Click += new System.EventHandler(this.buttonKatil_Click);
             // 
             // buttonEtkinlikCik
             // 
             this.buttonEtkinlikCik.BackColor = System.Drawing.Color.Transparent;
+            this.buttonEtkinlikCik.Enabled = false;
             this.buttonEtkinlikCik.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEtkinlikCik.Location = new System.Drawing.Point(510, 18);
             this.buttonEtkinlikCik.Name = "buttonEtkinlikCik";
@@ -132,7 +133,6 @@
             this.buttonEtkinlikCik.TabIndex = 12;
             this.buttonEtkinlikCik.Text = "Etkinlinten Çık";
             this.buttonEtkinlikCik.UseVisualStyleBackColor = false;
-            this.buttonEtkinlikCik.Visible = false;
             this.buttonEtkinlikCik.Click += new System.EventHandler(this.buttonEtkinlikCik_Click);
             // 
             // AnaEkran

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
+
 namespace SporOrganizasyon
 {
     public partial class Etkinlik : Form
@@ -21,17 +22,17 @@ namespace SporOrganizasyon
 
         private void Etkinlik_Load(object sender, EventArgs e)
         {
-            comboBoxTip.DataSource = bl.EtkinlikTipAl();
             comboBoxTip.DisplayMember = "Tip";
             comboBoxTip.ValueMember = "TipId";
+            comboBoxTip.DataSource = bl.EtkinlikTipAl();
 
-            comboBoxMekan.DataSource = bl.MekanAl();
             comboBoxMekan.DisplayMember = "MekanAdi";
             comboBoxMekan.ValueMember = "Mid";
+            comboBoxMekan.DataSource = bl.MekanAl();
 
-            comboBoxSpor.DataSource = bl.SporAl();
             comboBoxSpor.DisplayMember = "SporAdi";
             comboBoxSpor.ValueMember = "SporId";
+            comboBoxSpor.DataSource = bl.SporAl();
         }
 
         private void btnAc_Click(object sender, EventArgs e)
@@ -45,6 +46,18 @@ namespace SporOrganizasyon
             else
             {
                 MessageBox.Show("Etkinlik Oluşamadı");
+            }
+        }
+
+        private void comboBoxTip_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(comboBoxTip.SelectedValue.ToString()) == 3)
+            {
+                txtKontenjan.Text = 2.ToString();
+            }
+            else
+            {
+                txtKontenjan.Text = null;
             }
         }
     }

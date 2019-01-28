@@ -58,58 +58,72 @@ namespace SporOrganizasyon
 
         private void buttonKatil_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(dataGridView1.CurrentRow.Cells["Kontenjan"].Value) <= Convert.ToInt32(dataGridView1.CurrentRow.Cells["Katilanlar"].Value))
+            try
             {
-                MessageBox.Show("Yer Yok");
-            }
-            else
-            {
-
-                if (bl.EtkinlikKisiKontrol(int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()), Userid) > 0)
+                if (Convert.ToInt32(dataGridView1.CurrentRow.Cells["Kontenjan"].Value) <= Convert.ToInt32(dataGridView1.CurrentRow.Cells["Katilanlar"].Value))
                 {
-                    MessageBox.Show("Bu Etkinliğe önceden Kayit olmuşsunuz...");
+                    MessageBox.Show("Yer Yok");
                 }
-
                 else
                 {
-                    int id = bl.Katil(int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()), Userid);
-                    if (id > 0)
+
+                    if (bl.EtkinlikKisiKontrol(int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()), Userid) > 0)
                     {
-                        MessageBox.Show("Etkinliğe Katıldınız");
-                        dataGridView1.DataSource = null;
-                        dataGridView1.DataSource = bl.EtkinlikAl();
-                        dataGridView1.Columns["EtkinlikId"].Visible = false;
+                        MessageBox.Show("Bu Etkinliğe önceden Kayit olmuşsunuz...");
                     }
+
                     else
                     {
-                        MessageBox.Show("Problem Oluştu");
+                        int id = bl.Katil(int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()), Userid);
+                        if (id > 0)
+                        {
+                            MessageBox.Show("Etkinliğe Katıldınız");
+                            dataGridView1.DataSource = null;
+                            dataGridView1.DataSource = bl.EtkinlikAl();
+                            dataGridView1.Columns["EtkinlikId"].Visible = false;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Problem Oluştu");
+                        }
                     }
+
                 }
-                
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Lütfen Etkinlik Seçiniz...");
             }
 
         }
 
         private void buttonEtkinlikCik_Click(object sender, EventArgs e)
         {
-            if (bl.Cikis(int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()), Userid) > 0)
+            try
             {
-                MessageBox.Show("Bu Etkinlikten Çıktınız...");
-                dataGridView1.DataSource = null;
-                dataGridView1.DataSource = bl.EtkinlikAl();
-                dataGridView1.Columns["EtkinlikId"].Visible = false;
+                if (bl.Cikis(int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()), Userid) > 0)
+                {
+                    MessageBox.Show("Bu Etkinlikten Çıktınız...");
+                    dataGridView1.DataSource = null;
+                    dataGridView1.DataSource = bl.EtkinlikAl();
+                    dataGridView1.Columns["EtkinlikId"].Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("Zaten Bu Olaya Katilmamışsınız...");
+                }
             }
-            else
+            catch (Exception) 
             {
-                MessageBox.Show("Zaten Bu Olaya Katilmamışsınız...");
+                MessageBox.Show("Lütfen Etkinlik Seçiniz...");
             }
 
         }
 
         private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            buttonKatil.Visible = true;
-            buttonEtkinlikCik.Visible = true;
+            buttonKatil.Enabled = true;
+            buttonEtkinlikCik.Enabled = true;
         }
         
     }
